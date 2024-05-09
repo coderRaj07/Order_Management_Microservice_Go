@@ -1,6 +1,6 @@
 syntax = "proto3"
 
-option go_package = "github.com/coderRaj07/common/orders"; // change this to your github
+option go_package = "github.com/coderRaj07/common/orders"; 
 
 service OrderService{
     rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse);
