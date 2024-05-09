@@ -1,7 +1,35 @@
 syntax = "proto3"
 
-option go_package = "github.com/protocolbuffers/txtpb/txtpb"; // change this to your github
+option go_package = "github.com/coderRaj07/common/orders"; // change this to your github
 
 service OrderService{
     rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse);
+}
+
+message Order {
+    int32 orderID = 1
+    int32 customerID = 2
+    int32 productID = 3
+    int32 quantity = 4
+}
+
+message CreateOrderRequest {
+   int32 customerID = 1
+   int32 productID = 2
+   int32 quantity = 3
+}
+
+message CreateOrderResponse {
+   int32 orderID = 1
+   int32 customerID = 2
+   int32 productID = 3
+   int32 quantity = 4
+}
+
+message GetOrdersRequest {
+  int32 customerID = 1;
+}
+
+message GetOrderResponse {
+  repeated Order orders = 1;
 }
