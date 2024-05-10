@@ -1,14 +1,11 @@
-sudo go mod tidy
+export PATH="$PATH:$(sudo go env GOPATH)/bin"
 
-protoc-gen-go --version
+sudo go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28
 
-sudo apt install protoc-gen-go
+sudo go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
 
-
-export PATH=$PATH:$(sudo go env GOPATH)/bin
-
-sudo go get google.golang.org/grpc/cmd/protoc-gen-go-grpc
-
-sudo go install google.golang.org/grpc/cmd/protoc-gen-go-grpc
+sudo apt-get install protobuf-compiler
 
 protoc-gen-go-grpc --version
+
+make gen
