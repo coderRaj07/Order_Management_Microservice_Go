@@ -73,8 +73,3 @@ curl -X POST -d '{"customer_id": 123, "product_id": 456, "quantity": 10}' http:/
 - [Go gRPC Basics Tutorial](https://grpc.io/docs/languages/go/basics/)
 - [Protocol Buffers Language Guide](https://developers.google.com/protocol-buffers/docs/proto3)
 - [Clean Architecture in Go](https://medium.com/@hatajoe/clean-architecture-in-go-4030f11ec1b1)
-
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/4781680/ce41e6c5-e585-448d-b6b3-40796269f102/paste.txt
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/4781680/dd7b724c-a896-4afc-bb4a-4ef066a75ab2/paste-2.txt
-[3] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/4781680/b18336d4-cd79-4591-83c0-82e861b66c01/paste.txt
