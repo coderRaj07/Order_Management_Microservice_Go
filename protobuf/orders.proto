@@ -1,29 +1,27 @@
-syntax = "proto3"
+syntax = "proto3";
 
-option go_package = "github.com/coderRaj07/common/orders"; 
+option go_package = "github.com/sikozonpc/common/orders";
 
-service OrderService{
-    rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse);
+service OrderService {
+  rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse) {}
+  rpc GetOrders(GetOrdersRequest) returns (GetOrderResponse) {}
 }
 
 message Order {
-    int32 orderID = 1
-    int32 customerID = 2
-    int32 productID = 3
-    int32 quantity = 4
+  int32 OrderID = 1;
+  int32 CustomerID = 2;
+  int32 ProductID = 3;
+  int32 Quantity = 4;
 }
 
 message CreateOrderRequest {
-   int32 customerID = 1
-   int32 productID = 2
-   int32 quantity = 3
+  int32 customerID = 1;
+  int32 productID = 2;
+  int32 quantity = 3;
 }
 
 message CreateOrderResponse {
-   int32 orderID = 1
-   int32 customerID = 2
-   int32 productID = 3
-   int32 quantity = 4
+  string status = 1;
 }
 
 message GetOrdersRequest {
